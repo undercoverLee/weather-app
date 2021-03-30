@@ -32,6 +32,7 @@ E lidhim projektin tone lokalisht me repostoryin ne GitHub, me ane te komandes
     git add remote origin "https://github/undercoverLee/weather-app"  
 
 E dergojm projektin 
+
     git push origin master
 
 
