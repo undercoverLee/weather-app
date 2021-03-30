@@ -12,12 +12,15 @@ E nisim projektin me ane te komandes:
     git init
 
 I selektojm gjitha files me ane te komandes:
+
     git add -A
 
 Nese doni me dergu vetem nje file te caktuar, atehere perdorni komanden
+
     git add fileName.js
 
 Nese deshrioni me kontrollu gjendjen e file-ave qe jane modifik(changed)
+
     git status
 
 Pasi qe jemi gati me modifikim e dergojm gjendjen (fotogranfine) e projektit dhe mesazhin se cka eshte modifiku
