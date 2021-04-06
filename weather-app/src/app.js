@@ -68,11 +68,31 @@ app.get('/about', (req, res) => {
 
 app.get('/weather', (req, res) => {
 
+
+
+    //.. /weather?address=Prizren
     const address = req.query.address
-    weatherData(address, (result) => {
-        console.log(result)
+    if (!address) {
+        return res.send({
+            error: 'You must provide an address'
+        })
+    }
+
+
+    weatherData(address, (error, { temperature, description, cityName } = {}) => {
+        if (error) {
+            return res.send({
+                error
+            })
+        }
+        console.log(temperature, description, cityName);
+        res.send({
+            temperature,
+            description,
+            cityName
+        })
     })
-})
+});
 
 
 
