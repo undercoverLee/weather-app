@@ -65,19 +65,13 @@ app.get('/about', (req, res) => {
 // })
 
 // localhost:3000/weather?address=Prizen
-
 app.get('/weather', (req, res) => {
-
-
-
-    //.. /weather?address=Prizren
     const address = req.query.address
     if (!address) {
         return res.send({
-            error: 'You must provide an address'
+            error: "You must enter address"
         })
     }
-
 
     weatherData(address, (error, { temperature, description, cityName } = {}) => {
         if (error) {
@@ -93,10 +87,6 @@ app.get('/weather', (req, res) => {
         })
     })
 });
-
-
-
-
 
 // app.get('/products', (req, res) => {
 //     if (!req.query.search) {
